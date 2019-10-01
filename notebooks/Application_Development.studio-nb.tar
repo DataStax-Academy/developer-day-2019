@@ -1,0 +1,137 @@
+notebook.bin0100644 0000000 0000000 00000034173 13544741116 012135 0ustar000000000 0000000 json_notebook_v1{"1":"4c245d12-079c-4f30-8fca-fe73076e6395","10":"874a3d65-9d00-4241-9b85-e0d2eba02693","11":"03-01 - Application Development","12":{"1":1569941062,"2":596000000},"13":{"1":1569964548,"2":735000000},"14":false,"15":[{"1":"11019359-dd5c-43b3-bbf4-4e040eb6cc6a","10":4,"11":"<center><img src=\"//datastaxtraining.s3.amazonaws.com/developer-day/developer-day-studio-header.png\" width=\"800\"></center>\n\n![line](https://datastaxtraining.s3.amazonaws.com/developer-day/lineblue.png \"line\" )\n# <center><span style=\"color:navy\">Application Development</span></center>\n\n<p><br>\nIn this exercise, you will implement sample codes to create a `users` table, insert records, and read records back from it. \n\nFirst, open your web-based Eclipse editor (Theia) by visiting the url: `http://<your-theia-node-IP-address>.datastaxtraining.com`.\n\n<center><img src=\"//datastaxtraining.s3.amazonaws.com/developer-day/app-dev/eclipse-theia.png\" width=800></center>","12":"markdown","13":{"1":"0cc8661b-7b3f-4b7a-aaf9-4941847b3896","10":{"9":"<p><center><img src=\" //datastaxtraining.s3.amazonaws.com/developer-day/developer-day-studio-header.png\" width=\"800\"></center></p>\n<p><img src=\"https://datastaxtraining.s3.amazonaws.com/developer-day/lineblue.png\" alt=\"line\" title=\"line\" /></p>\n<h1><center><span style=\"color:navy\">Application Development</span></center></h1>\n<p><p><br>\n<br  />In this exercise, you will implement sample codes to create a <code>users</code> table, insert records, and read records back from it.</p>\n<p>First, open your web-based Eclipse editor (Theia) by visiting the url: <code>http://&lt;your-theia-node-IP-address&gt;.datastaxtraining.com</code>.</p>\n<p><center><img src=\" //datastaxtraining.s3.amazonaws.com/developer-day/app-dev/eclipse-theia.png\" width=800></center></p>\n"},"11":4,"12":false},"16":true,"17":true,"18":{},"25":"CL.ONE"},{"1":"12105ee5-38e2-45ed-b86d-16604887c074","10":4,"11":"![line](https://datastaxtraining.s3.amazonaws.com/developer-day/lineblue.png \"line\" )\n### <center><span style=\"color:navy\">Prerequisites</span></center>\n\n<p><br>\nExecute the following queries to get informations about the 3 nodes of your cluster.\n\nFirst information about the node on which is hosted this tool (table `local`)","12":"markdown","13":{"1":"20ca6c0d-4f4e-4a9e-b0c2-ebdd6444b0c0","10":{"9":"<p><img src=\"https://datastaxtraining.s3.amazonaws.com/developer-day/lineblue.png\" alt=\"line\" title=\"line\" /></p>\n<h3><center><span style=\"color:navy\">Prerequisites</span></center></h3>\n<p><p><br>\n<br  />Execute the following queries to get informations about the 3 nodes of your cluster.</p>\n<p>First information about the node on which is hosted this tool (table <code>local</code>)</p>\n"},"11":4,"12":false},"16":true,"17":true,"18":{},"25":"CL.ONE"},{"1":"c46f35d1-8964-45ee-b424-83bc665ff0b5","10":0,"11":"select native_transport_address,data_center from system.local;","12":"cql","16":true,"17":false,"25":"CL.ONE"},{"1":"ce35c727-6943-4762-ae48-a2f25af20604","10":4,"11":"You noticed that the datacenter name has been set to `DC1` for you.\n\nNow, execute the following query to get IP and dataCenter Name for the 2 other nodes ","12":"markdown","13":{"1":"a3f3bcf4-8526-4eca-8416-058d333c832b","10":{"9":"<p>You noticed that the datacenter name has been set to <code>DC1</code> for you.</p>\n<p>Now, execute the following query to get IP and dataCenter Name for the 2 other nodes</p>\n"},"11":4,"12":false},"16":true,"17":true,"18":{},"25":"CL.ONE"},{"1":"c951d933-bdc0-49f9-8f37-6fc431d02c4b","10":0,"11":"select native_transport_address,data_center from system.peers;","12":"cql","16":true,"17":false,"25":"CL.ONE"},{"1":"74866edb-bee3-4aae-8748-aa3a4d45d045","10":4,"11":"You noticed that **Node2** and **Node3** are part of the same datacenter. You will need the IP listed before during your exercises.","12":"markdown","13":{"1":"f5e1e038-d7e5-421e-be26-023d50191420","10":{"9":"<p>You noticed that <strong>Node2</strong> and <strong>Node3</strong> are part of the same datacenter. You will need the IP listed before during your exercises.</p>\n"},"11":4,"12":false},"16":true,"17":true,"18":{},"25":"CL.ONE"},{"1":"ba5659c9-1dc0-435a-94d3-c283ec24abbf","10":4,"11":"![line](https://datastaxtraining.s3.amazonaws.com/developer-day/lineblue.png \"line\" )\n### <center><span style=\"color:navy\">Exercise 1: Connecting to the Cluster</span></center>\n\n<p><br>\n* Open the class `ClusterSettings`, and populate the 3 constants `CONTACT_POINT_1`, `CONTACT_POINT_2` and `KEYSPACENAME` as described in the comments. \n\n<p><br>\n* Open the class `Exercise1_ConnectAndCreateSchema` and setup your connection to point to your cluster and your dataCenter. You will need to edit the following line:\n\n```\nCqlSession cqlSession = CqlSession.builder().build()\n```\n\n<p><br>\n\n* Execute the class as a Java Application\n\n<p><br>\nYou can test your code using the tasks under the `Terminal->Run Task...` menu option.\n\n<center><img src=\"//datastaxtraining.s3.amazonaws.com/developer-day/app-dev/run-tasks.png\" width=800></center>\n<p><br>\nYou will found a task defined for each Exercise, 4 in total\n\n<center><img src=\"//datastaxtraining.s3.amazonaws.com/developer-day/app-dev/cday-appdev-java-tasks.png\" width=1100 )</img></center>\n\n<p><br>\n**Links that might be useful**:\n- [Java Driver Documentation](https://docs.datastax.com/en/developer/java-driver/latest/manual/core)\n- [InetSocketAddress Documentation](https://docs.oracle.com/en/java/javase/12/docs/api/java.base/java/net/InetSocketAddress.html)\n","12":"markdown","13":{"1":"08d96b4b-bdf7-40a7-9fb5-39e4f1aa2bc4","10":{"9":"<p><img src=\"https://datastaxtraining.s3.amazonaws.com/developer-day/lineblue.png\" alt=\"line\" title=\"line\" /></p>\n<h3><center><span style=\"color:navy\">Exercise 1: Connecting to the Cluster</span></center></h3>\n<p><p><br></p>\n<ul>\n<li>Open the class <code>ClusterSettings</code>, and populate the 3 constants <code>CONTACT_POINT_1</code>, <code>CONTACT_POINT_2</code> and <code>KEYSPACENAME</code> as described in the comments.</li>\n</ul>\n<p><p><br></p>\n<ul>\n<li>Open the class <code>Exercise1_ConnectAndCreateSchema</code> and setup your connection to point to your cluster and your dataCenter. You will need to edit the following line:</li>\n</ul>\n<pre><code>CqlSession cqlSession = CqlSession.builder().build()\n</code></pre>\n<p><p><br></p>\n<ul>\n<li>Execute the class as a Java Application</li>\n</ul>\n<p><p><br>\n<br  />You can test your code using the tasks under the <code>Terminal-&gt;Run Task...</code> menu option.</p>\n<p><center><img src=\" //datastaxtraining.s3.amazonaws.com/developer-day/app-dev/run-tasks.png\" width=800></center>\n<br  /><p><br>\n<br  />You will found a task defined for each Exercise, 4 in total</p>\n<p><center><img src=\" //datastaxtraining.s3.amazonaws.com/developer-day/app-dev/cday-appdev-java-tasks.png\" width=1100 )</img></center></p>\n<p><p><br>\n<br  /><strong>Links that might be useful</strong>:</p>\n<ul>\n<li><a href=\"https://docs.datastax.com/en/developer/java-driver/latest/manual/core\">Java Driver Documentation</a></li>\n<li><a href=\"https://docs.oracle.com/en/java/javase/12/docs/api/java.base/java/net/InetSocketAddress.html\">InetSocketAddress Documentation</a></li>\n</ul>\n"},"11":4,"12":false},"16":true,"17":true,"18":{},"25":"CL.ONE"},{"1":"ae19d663-70ef-40a0-ac87-4ea687b981d3","10":4,"11":"![line](https://datastaxtraining.s3.amazonaws.com/developer-day/lineblue.png \"line\" )\n### <center><span style=\"color:navy\">Exercise 2: Simple Statements</span></center>\n\n<p><br>\n* Open the class `Exercise2_CreateSimpleStatement` and define a statement to insert a new user in the `users` table\n\n```\nSimpleStatement.builder(\"<YOUR_STATEMENT>\").build();\n```\n<p><br>\n* Execute the class as a Java Application. After completing the exercise, you should be able to execute the request below...\n\n<p><br>\n**Links that might be useful:**\n * [Documentation on Statements](https://docs.datastax.com/en/developer/java-driver/latest/manual/core/statements/simple/)\n\n","12":"markdown","13":{"1":"92ee8b5e-150a-409f-8a9f-92091987be3a","10":{"9":"<p><img src=\"https://datastaxtraining.s3.amazonaws.com/developer-day/lineblue.png\" alt=\"line\" title=\"line\" /></p>\n<h3><center><span style=\"color:navy\">Exercise 2: Simple Statements</span></center></h3>\n<p><p><br></p>\n<ul>\n<li>Open the class <code>Exercise2_CreateSimpleStatement</code> and define a statement to insert a new user in the <code>users</code> table</li>\n</ul>\n<pre><code>SimpleStatement.builder(\"&lt;YOUR_STATEMENT&gt;\").build();\n</code></pre>\n<p><p><br></p>\n<ul>\n<li>Execute the class as a Java Application. After completing the exercise, you should be able to execute the request below&hellip;</li>\n</ul>\n<p><p><br>\n<br  /><strong>Links that might be useful:</strong></p>\n<ul>\n<li><a href=\"https://docs.datastax.com/en/developer/java-driver/latest/manual/core/statements/simple/\">Documentation on Statements</a></li>\n</ul>\n"},"11":4,"12":false},"16":true,"17":true,"18":{},"25":"CL.ONE"},{"1":"4a75ead4-d168-4125-a16b-7c9df88cd084","10":4,"11":"select * from <your_keyspace>.users;","12":"cql","13":{"1":"1bc634aa-32c2-4e19-a725-277045e2db3a","10":{"127":"com.datastax.studio.notebook.serialization.model.ListWithNulls","3":0},"11":1,"12":false,"14":2},"16":true,"17":false,"25":"CL.ONE"},{"1":"3b7a1822-74d6-458b-8ab0-0dc107d9750e","10":4,"11":"![line](https://datastaxtraining.s3.amazonaws.com/developer-day/lineblue.png \"line\" )\n### <center><span style=\"color:navy\">Exercise 3: Prepared Statements</span></center>\n\n<p><br>\n* Open class `Exercise3_CreatePreparedStatement` and provide a value to define a `preparedStatement` in the following method:\n\n```\nprivate static PreparedStatement prepareStatementOnce(CqlSession cqlSession) {\n   return <PREPARED_A_STATEMENT>;\n}\n```\n<p><br>\n* Bind the parameters to create a `BoundStatement` in the `bindQuery()` method\n\n```\nprivate static BoundStatement bindQuery(PreparedStatement queryInsertUser, \n            String firstName, String lastName, int age, String city, String email) {\n   return <BIND_THE_PREPARED_STATEMENT>;;\n}\n```\n<p><br>\n* Execute the class as a Java Application. Again, after completing the exercise, you should be able to execute the request below and see you new results.\n\n<p><br>\n**Links that might be useful:**\n * [Documentation on Prepared Statements](https://docs.datastax.com/en/developer/java-driver/4.2/manual/core/statements/prepared/#preparing)\n * [Documentation on Bind Statements](https://docs.datastax.com/en/developer/java-driver/4.2/manual/core/statements/prepared/#parameters-and-binding)\n\n","12":"markdown","13":{"1":"8036132d-f8b2-4d10-a6c6-ba9501b498af","10":{"9":"<p><img src=\"https://datastaxtraining.s3.amazonaws.com/developer-day/lineblue.png\" alt=\"line\" title=\"line\" /></p>\n<h3><center><span style=\"color:navy\">Exercise 3: Prepared Statements</span></center></h3>\n<p><p><br></p>\n<ul>\n<li>Open class <code>Exercise3_CreatePreparedStatement</code> and provide a value to define a <code>preparedStatement</code> in the following method:</li>\n</ul>\n<pre><code>private static PreparedStatement prepareStatementOnce(CqlSession cqlSession) {\n   return &lt;PREPARED_A_STATEMENT&gt;;\n}\n</code></pre>\n<p><p><br></p>\n<ul>\n<li>Bind the parameters to create a <code>BoundStatement</code> in the <code>bindQuery()</code> method</li>\n</ul>\n<pre><code>private static BoundStatement bindQuery(PreparedStatement queryInsertUser, \n            String firstName, String lastName, int age, String city, String email) {\n   return &lt;BIND_THE_PREPARED_STATEMENT&gt;;;\n}\n</code></pre>\n<p><p><br></p>\n<ul>\n<li>Execute the class as a Java Application. Again, after completing the exercise, you should be able to execute the request below and see you new results.</li>\n</ul>\n<p><p><br>\n<br  /><strong>Links that might be useful:</strong></p>\n<ul>\n<li><a href=\"https://docs.datastax.com/en/developer/java-driver/4.2/manual/core/statements/prepared/#preparing\">Documentation on Prepared Statements</a></li>\n<li><a href=\"https://docs.datastax.com/en/developer/java-driver/4.2/manual/core/statements/prepared/#parameters-and-binding\">Documentation on Bind Statements</a></li>\n</ul>\n"},"11":4,"12":false},"16":true,"17":true,"18":{},"25":"CL.ONE"},{"1":"a04b32cb-6c71-4cf5-9470-963d2594d5cf","11":"select * from <your_keyspace>.users;","12":"cql","16":true,"17":false,"25":"CL.ONE"},{"1":"007dfcc6-4bbb-4b12-9f42-8e4b67585281","10":4,"11":"![line](https://datastaxtraining.s3.amazonaws.com/developer-day/lineblue.png \"line\" )\n### <center><span style=\"color:navy\">Exercise 4: Reading Data</span></center>\n\n<p><br>\n* Open class `Exercise4_ListUsers` and implement the `displayUsers` method to log the `FirstName` and `LastName` of each row.\n\n```\nprivate static void displayUsers(ResultSet rs) {\n   LOGGER.info(\"...\");\n}\n```\n\n<p><br>\n* Execute the class as a Java Application\n\n<p><br>\n**Links that might be useful:**\n * [Documentation on Statements in the Java Driver](https://docs.datastax.com/en/developer/java-driver/4.2/manual/core/#running-queries)\n\n    ","12":"markdown","13":{"1":"4d8fe5fd-341a-4bfe-9963-158710c5f844","10":{"9":"<p><img src=\"https://datastaxtraining.s3.amazonaws.com/developer-day/lineblue.png\" alt=\"line\" title=\"line\" /></p>\n<h3><center><span style=\"color:navy\">Exercise 4: Reading Data</span></center></h3>\n<p><p><br></p>\n<ul>\n<li>Open class <code>Exercise4_ListUsers</code> and implement the <code>displayUsers</code> method to log the <code>FirstName</code> and <code>LastName</code> of each row.</li>\n</ul>\n<pre><code>private static void displayUsers(ResultSet rs) {\n   LOGGER.info(\"...\");\n}\n</code></pre>\n<p><p><br></p>\n<ul>\n<li>Execute the class as a Java Application</li>\n</ul>\n<p><p><br>\n<br  /><strong>Links that might be useful:</strong></p>\n<ul>\n<li><a href=\"https://docs.datastax.com/en/developer/java-driver/4.2/manual/core/#running-queries\">Documentation on Statements in the Java Driver</a></li>\n</ul>\n"},"11":4,"12":false},"16":true,"17":true,"18":{},"25":"CL.ONE"}],"16":{"1":{}},"17":""}code.txt0100644 0000000 0000000 00000013607 13544741116 011275 0ustar000000000 0000000 --------------------NOTEBOOK_03-01 - Application Development--------------------
+--------------------CELL_MARKDOWN_1--------------------
+<center><img src="//datastaxtraining.s3.amazonaws.com/developer-day/developer-day-studio-header.png" width="800"></center>
+
+![line](https://datastaxtraining.s3.amazonaws.com/developer-day/lineblue.png "line" )
+# <center><span style="color:navy">Application Development</span></center>
+
+<p><br>
+In this exercise, you will implement sample codes to create a `users` table, insert records, and read records back from it. 
+
+First, open your web-based Eclipse editor (Theia) by visiting the url: `http://<your-theia-node-IP-address>.datastaxtraining.com`.
+
+<center><img src="//datastaxtraining.s3.amazonaws.com/developer-day/app-dev/eclipse-theia.png" width=800></center>
+--------------------CELL_MARKDOWN_2--------------------
+![line](https://datastaxtraining.s3.amazonaws.com/developer-day/lineblue.png "line" )
+### <center><span style="color:navy">Prerequisites</span></center>
+
+<p><br>
+Execute the following queries to get informations about the 3 nodes of your cluster.
+
+First information about the node on which is hosted this tool (table `local`)
+--------------------CELL_CQL_3--------------------
+select native_transport_address,data_center from system.local;
+--------------------CELL_MARKDOWN_4--------------------
+You noticed that the datacenter name has been set to `DC1` for you.
+
+Now, execute the following query to get IP and dataCenter Name for the 2 other nodes 
+--------------------CELL_CQL_5--------------------
+select native_transport_address,data_center from system.peers;
+--------------------CELL_MARKDOWN_6--------------------
+You noticed that **Node2** and **Node3** are part of the same datacenter. You will need the IP listed before during your exercises.
+--------------------CELL_MARKDOWN_7--------------------
+![line](https://datastaxtraining.s3.amazonaws.com/developer-day/lineblue.png "line" )
+### <center><span style="color:navy">Exercise 1: Connecting to the Cluster</span></center>
+
+<p><br>
+* Open the class `ClusterSettings`, and populate the 3 constants `CONTACT_POINT_1`, `CONTACT_POINT_2` and `KEYSPACENAME` as described in the comments. 
+
+<p><br>
+* Open the class `Exercise1_ConnectAndCreateSchema` and setup your connection to point to your cluster and your dataCenter. You will need to edit the following line:
+
+```
+CqlSession cqlSession = CqlSession.builder().build()
+```
+
+<p><br>
+
+* Execute the class as a Java Application
+
+<p><br>
+You can test your code using the tasks under the `Terminal->Run Task...` menu option.
+
+<center><img src="//datastaxtraining.s3.amazonaws.com/developer-day/app-dev/run-tasks.png" width=800></center>
+<p><br>
+You will found a task defined for each Exercise, 4 in total
+
+<center><img src="//datastaxtraining.s3.amazonaws.com/developer-day/app-dev/cday-appdev-java-tasks.png" width=1100 )</img></center>
+
+<p><br>
+**Links that might be useful**:
+- [Java Driver Documentation](https://docs.datastax.com/en/developer/java-driver/latest/manual/core)
+- [InetSocketAddress Documentation](https://docs.oracle.com/en/java/javase/12/docs/api/java.base/java/net/InetSocketAddress.html)
+
+--------------------CELL_MARKDOWN_8--------------------
+![line](https://datastaxtraining.s3.amazonaws.com/developer-day/lineblue.png "line" )
+### <center><span style="color:navy">Exercise 2: Simple Statements</span></center>
+
+<p><br>
+* Open the class `Exercise2_CreateSimpleStatement` and define a statement to insert a new user in the `users` table
+
+```
+SimpleStatement.builder("<YOUR_STATEMENT>").build();
+```
+<p><br>
+* Execute the class as a Java Application. After completing the exercise, you should be able to execute the request below...
+
+<p><br>
+**Links that might be useful:**
+ * [Documentation on Statements](https://docs.datastax.com/en/developer/java-driver/latest/manual/core/statements/simple/)
+
+
+--------------------CELL_CQL_9--------------------
+select * from <your_keyspace>.users;
+--------------------CELL_MARKDOWN_10--------------------
+![line](https://datastaxtraining.s3.amazonaws.com/developer-day/lineblue.png "line" )
+### <center><span style="color:navy">Exercise 3: Prepared Statements</span></center>
+
+<p><br>
+* Open class `Exercise3_CreatePreparedStatement` and provide a value to define a `preparedStatement` in the following method:
+
+```
+private static PreparedStatement prepareStatementOnce(CqlSession cqlSession) {
+   return <PREPARED_A_STATEMENT>;
+}
+```
+<p><br>
+* Bind the parameters to create a `BoundStatement` in the `bindQuery()` method
+
+```
+private static BoundStatement bindQuery(PreparedStatement queryInsertUser, 
+            String firstName, String lastName, int age, String city, String email) {
+   return <BIND_THE_PREPARED_STATEMENT>;;
+}
+```
+<p><br>
+* Execute the class as a Java Application. Again, after completing the exercise, you should be able to execute the request below and see you new results.
+
+<p><br>
+**Links that might be useful:**
+ * [Documentation on Prepared Statements](https://docs.datastax.com/en/developer/java-driver/4.2/manual/core/statements/prepared/#preparing)
+ * [Documentation on Bind Statements](https://docs.datastax.com/en/developer/java-driver/4.2/manual/core/statements/prepared/#parameters-and-binding)
+
+
+--------------------CELL_CQL_11--------------------
+select * from <your_keyspace>.users;
+--------------------CELL_MARKDOWN_12--------------------
+![line](https://datastaxtraining.s3.amazonaws.com/developer-day/lineblue.png "line" )
+### <center><span style="color:navy">Exercise 4: Reading Data</span></center>
+
+<p><br>
+* Open class `Exercise4_ListUsers` and implement the `displayUsers` method to log the `FirstName` and `LastName` of each row.
+
+```
+private static void displayUsers(ResultSet rs) {
+   LOGGER.info("...");
+}
+```
+
+<p><br>
+* Execute the class as a Java Application
+
+<p><br>
+**Links that might be useful:**
+ * [Documentation on Statements in the Java Driver](https://docs.datastax.com/en/developer/java-driver/4.2/manual/core/#running-queries)
+
+    
+versions-info.txt0100644 0000000 0000000 00000000026 13544741116 013153 0ustar000000000 0000000 Studio Version: 6.7.0
