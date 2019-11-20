@@ -9,9 +9,9 @@ In this repository, you'll find everything from the Developer Day event. There a
 
 | Duration  | Title
 |---|---|
-| 90 minutes  | [Core Cassandra](slides/Developer Day 2019 Core Cassandra.pdf)  |
-| 120 minutes | [Cassandra Data Modeling](slides/Developer Day 2019 Data Modeling.pdf)  |
-| 90 minutes | [Cassandra Application Development](slides/Developer Day 2019 Application Development.pdf)  |
+| 90 minutes  | [Core Cassandra](./slides/Developer Day 2019 Core Cassandra.pdf)  |
+| 120 minutes | [Cassandra Data Modeling](./slides/Developer Day 2019 Data Modeling.pdf)  |
+| 90 minutes | [Cassandra Application Development](./slides/Developer Day 2019 Application Development.pdf)  |
 
 TODO add other modules
 
