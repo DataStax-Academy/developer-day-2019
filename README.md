@@ -5,15 +5,16 @@ In this repository, you'll find everything from the Developer Day event. There a
 
 <img src="./img/CassandraDayBanner.png" height="200" />
 
-## Agenda
+## Contents
 
-| Duration  | Title
-|---|---|
-| 90 minutes  | [Core Cassandra](https://github.com/DataStax-Academy/developer-day-2019/tree/master/slides/Developer%20Day%202019%20Core%20Cassandra.pdf)  |
-| 120 minutes | [Cassandra Data Modeling](https://github.com/DataStax-Academy/developer-day-2019/tree/master/slides/Developer%20Day%202019%20Data%20Modeling.pdf)  |
-| 90 minutes | [Cassandra Application Development](https://github.com/DataStax-Academy/developer-day-2019/tree/master/slides/Developer%20Day%202019%20Application%20Development.pdf)  |
-
-TODO add other modules
+* Cassandra-focused modules
+  * [Core Cassandra](slides/Developer%20Day%202019%20Core%20Cassandra.pdf)  
+  * [Cassandra Data Modeling](slides/Developer%20Day%202019%20Data%20Modeling.pdf) 
+  * [Cassandra Application Development](slides/Developer%20Day%202019%20Application%20Development.pdf) 
+* DataStax Enterprise-focused modules
+  * [DSE Search](slides/Developer%20Day%202019%20DSE%20Search.pdf)  
+  * [DSE Analytics](slides/Developer%20Day%202019%20DSE%20Analytics.pdf) 
+  * [DSE Graph](slides/Developer%20Day%202019%20DSE%20Graph.pdf) 
 
 ## Hands-On Exercises 
 ### Installation Instructions
@@ -32,7 +33,7 @@ Open [localhost:9091](http://localhost:9091) (if you use *docker-machine* or pre
 
 ### Exercises
 
-**Notice** You don't need to do any additional setup if you use Docker Version.
+Note: You don't need to do any additional setup if you run using Docker.
 
 #### Core Cassandra
 | Notebook File | Setup Notes
@@ -57,5 +58,5 @@ Open [localhost:9091](http://localhost:9091) (if you use *docker-machine* or pre
 ### Extra Materials
 
 * Get involved more tutorials here [DataStax Academy](https://academy.datastax.com/)
-* Learn more about [KillrVideo](https://github.com/killrvideo)
-* More sample codes [HERE](https://github.com/DataStaxCodeSamples)
+* Learn more about [KillrVideo](https://killrvideo.github.io)
+* More sample code [HERE](https://github.com/DataStaxCodeSamples)
