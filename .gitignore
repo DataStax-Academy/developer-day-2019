@@ -4,3 +4,5 @@
 *~
 .DS_Store
 developer-day-2019.iml
+studio/notebooks/*
+!studio/notebooks/*.tar
