@@ -9,9 +9,9 @@ In this repository, you'll find everything from the Developer Day event. There a
 
 | Duration  | Title
 |---|---|
-| 90 minutes  | [Core Cassandra](https://github.com/DataStax-Academy/developer-day-2019/tree/master/slides/Developer Day 2019 Core Cassandra.pdf)  |
-| 120 minutes | [Cassandra Data Modeling](https://github.com/DataStax-Academy/developer-day-2019/tree/master/slides/Developer Day 2019 Data Modeling.pdf)  |
-| 90 minutes | [Cassandra Application Development](https://github.com/DataStax-Academy/developer-day-2019/tree/master/slides/Developer Day 2019 Application Development.pdf)  |
+| 90 minutes  | [Core Cassandra](https://github.com/DataStax-Academy/developer-day-2019/tree/master/slides/Developer%20Day%202019%20Core%20Cassandra.pdf)  |
+| 120 minutes | [Cassandra Data Modeling](https://github.com/DataStax-Academy/developer-day-2019/tree/master/slides/Developer%20Day%202019%20Data%20Modeling.pdf)  |
+| 90 minutes | [Cassandra Application Development](https://github.com/DataStax-Academy/developer-day-2019/tree/master/slides/Developer%20Day%202019%20Application%20Development.pdf)  |
 
 TODO add other modules
 
