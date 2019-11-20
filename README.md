@@ -9,9 +9,9 @@ In this repository, you'll find everything from the Developer Day event. There a
 
 | Duration  | Title
 |---|---|
-| 90 minutes  | [Core Cassandra](./slides/Developer Day 2019 Core Cassandra.pdf)  |
-| 120 minutes | [Cassandra Data Modeling](./slides/Developer Day 2019 Data Modeling.pdf)  |
-| 90 minutes | [Cassandra Application Development](./slides/Developer Day 2019 Application Development.pdf)  |
+| 90 minutes  | [Core Cassandra](https://github.com/DataStax-Academy/developer-day-2019/tree/master/slides/Developer Day 2019 Core Cassandra.pdf)  |
+| 120 minutes | [Cassandra Data Modeling](https://github.com/DataStax-Academy/developer-day-2019/tree/master/slides/Developer Day 2019 Data Modeling.pdf)  |
+| 90 minutes | [Cassandra Application Development](https://github.com/DataStax-Academy/developer-day-2019/tree/master/slides/Developer Day 2019 Application Development.pdf)  |
 
 TODO add other modules
 
@@ -37,9 +37,9 @@ Open [localhost:9091](http://localhost:9091) (if you use *docker-machine* or pre
 #### Core Cassandra
 | Notebook File | Setup Notes
 |---|---|
-| [Core Cassandra First Touch](studio/notebooks/01-01_-_Core_Cassandra_First_Touch.studio-nb.tar) | - Data should be [loaded](data) in the `killrvideo` keyspace.
-| [Core Cassandra Data Loading](studio/notebooks/01-02_-_Core_Cassandra_Data_Loading.studio-nb.tar) | - Data should be [loaded](data) in the `killrvideo` keyspace.<br> - Uses the file **movies.csv**, located in this repo under `data/csv/movies.csv`.
-| [Core Cassandra Data Availability](studio/notebooks/01-03_-_Core_Cassandra_Data_Availability.studio-nb.tar) | - This notebook exercise can only be done with a three-node DSE cluster.<br> - Recommended to drop the `killrvideo` keyspace, if it exists.<br>- Uses a hard-coded datacenter `DC1`; replace that with your own datacenter name, where needed.<br> - Install and setup [DataStax OpsCenter](https://docs.datastax.com/en/install/doc/install60/opscInstallOpsc.html) to monitor your cluster.
+| [Core Cassandra First Touch](https://github.com/DataStax-Academy/developer-day-2019/tree/master/studio/notebooks/01-01_-_Core_Cassandra_First_Touch.studio-nb.tar) | - Data should be [loaded](data) in the `killrvideo` keyspace.
+| [Core Cassandra Data Loading](https://github.com/DataStax-Academy/developer-day-2019/tree/master/studio/notebooks/01-02_-_Core_Cassandra_Data_Loading.studio-nb.tar) | - Data should be [loaded](data) in the `killrvideo` keyspace.<br> - Uses the file **movies.csv**, located in this repo under `data/csv/movies.csv`.
+| [Core Cassandra Data Availability](https://github.com/DataStax-Academy/developer-day-2019/tree/master/studio/notebooks/01-03_-_Core_Cassandra_Data_Availability.studio-nb.tar) | - This notebook exercise can only be done with a three-node DSE cluster.<br> - Recommended to drop the `killrvideo` keyspace, if it exists.<br>- Uses a hard-coded datacenter `DC1`; replace that with your own datacenter name, where needed.<br> - Install and setup [DataStax OpsCenter](https://docs.datastax.com/en/install/doc/install60/opscInstallOpsc.html) to monitor your cluster.
 
 #### Data Modeling
 | Notebook File | Setup Notes
